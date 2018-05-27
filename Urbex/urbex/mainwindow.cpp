@@ -23,15 +23,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(shortcut_quitter, SIGNAL(triggered()), this, SLOT(close()));
     this->addAction(shortcut_quitter);
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-                //RACCOURCIS POUR OUVRIR LE MODE INVITE
-                //QAction *shortcut_modeInvite = new QAction(this);
-                //shortcut_modeInvite->setShortcut(Qt::Key_M);
-
-                //connect(shortcut_modeInvite, SIGNAL(triggered()), this, SLOT(open()));
-                //this->addAction(shortcut_modeInvite);
-    /////////////////////////////////////////////////////////////////////////////////////////
-
     //PERMET DE SAVOIR SI LA BASE DE DONNEE EST DETECTER OU NON
 
     db=QSqlDatabase::addDatabase("QSQLITE");
