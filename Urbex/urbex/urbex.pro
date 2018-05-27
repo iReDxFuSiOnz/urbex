@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT          += core gui sql
-QT          += core gui webkit webkitwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,12 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    secdialog.cpp
+    urbexeuraccessibility.cpp \
+    modeinvites.cpp
 
 HEADERS += \
         mainwindow.h \
-    secdialog.h
+    urbexeuraccessibility.h \
+    modeinvites.h
 
 FORMS += \
         mainwindow.ui \
-    secdialog.ui
+    urbexeuraccessibility.ui \
+    modeinvites.ui

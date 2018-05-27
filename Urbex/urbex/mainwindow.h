@@ -6,7 +6,8 @@
 #include <QtDebug>
 #include <QFileInfo>
 
-#include "secdialog.h"
+#include "urbexeuraccessibility.h"
+#include "modeinvites.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,11 +23,14 @@ public:
 
 private slots:
     void on_ButtonConnexion_clicked();
+    void on_ButtonModeInvite_clicked();
 
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
-    SecDialog *openWindow;
+    UrbexeurAccessibility *openWindowUrbexeur;
+    ModeInvites *openWindowInvite;
+
 
 };
 

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>secDialog</class>
- <widget class="QDialog" name="secDialog">
+ <class>UrbexeurAccessibility</class>
+ <widget class="QDialog" name="UrbexeurAccessibility">
   <property name="geometry">
    <rect>
     <x>0</x>

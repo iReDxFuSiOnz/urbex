@@ -1,13 +1,35 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "secdialog.h"
+#include "urbexeuraccessibility.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    this->setFixedSize(300,150);
+    //FIXE LA TAILLE DE LA FENETRE
+    this->setFixedSize(400,120);
     ui->setupUi(this);
+
+    //DONNER UN TITRE A LA FENETRE
+    this->setWindowTitle("Urbex - v0.1");
+
+    //RACCOURCIS POUR FERMER LA FENETRE
+    QAction *shortcut_quitter = new QAction(this);
+    shortcut_quitter->setShortcut(Qt::Key_Q | Qt::CTRL);
+
+    connect(shortcut_quitter, SIGNAL(triggered()), this, SLOT(close()));
+    this->addAction(shortcut_quitter);
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+                //RACCOURCIS POUR OUVRIR LE MODE INVITE
+                //QAction *shortcut_modeInvite = new QAction(this);
+                //shortcut_modeInvite->setShortcut(Qt::Key_M);
+
+                //connect(shortcut_modeInvite, SIGNAL(triggered()), this, SLOT(open()));
+                //this->addAction(shortcut_modeInvite);
+    /////////////////////////////////////////////////////////////////////////////////////////
+
+    //PERMET DE SAVOIR SI LA BASE DE DONNEE EST DETECTER OU NON
 
     db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("E:/SQLite/bdd_urbex.db");
@@ -45,8 +67,8 @@ void MainWindow::on_ButtonConnexion_clicked()
        if(count==1)
        {
            ui->label_diag->setText("Connexion réussi!");
-           openWindow = new SecDialog(this);
-           openWindow->show();
+           openWindowUrbexeur = new UrbexeurAccessibility(this);
+           openWindowUrbexeur ->show();
        }
 
        if(count>1)
@@ -61,4 +83,11 @@ void MainWindow::on_ButtonConnexion_clicked()
 
     //ui->label_diag->setText("Connexion en cours...");
 
+}
+
+
+void MainWindow::on_ButtonModeInvite_clicked()
+{
+    openWindowInvite = new ModeInvites(this);
+    openWindowInvite->show();
 }
