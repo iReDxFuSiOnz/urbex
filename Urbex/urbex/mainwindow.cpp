@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include "urbexeuraccessibility.h"
 
+#include <QDesktopServices>
+#include <QUrl>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -85,9 +88,8 @@ void MainWindow::on_ButtonConnexion_clicked()
 
 }
 
-
-void MainWindow::on_ButtonModeInvite_clicked()
+void MainWindow::on_ButtonInscription_clicked()
 {
-    openWindowInvite = new ModeInvites(this);
-    openWindowInvite->show();
+    QString link_inscription = "https://docs.google.com/forms/d/e/1FAIpQLSf657zhgK09ECKRjK8_ASebRavhWPKZvOT0OaWeyptyfTqc3Q/viewform";
+    QDesktopServices::openUrl(QUrl(link_inscription));
 }

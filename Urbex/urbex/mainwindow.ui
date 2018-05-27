@@ -33,30 +33,17 @@
       <x>130</x>
       <y>10</y>
       <width>261</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="title">
-     <string/>
+     <string>Connexion</string>
     </property>
-    <widget class="QLabel" name="label_id">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Identifiant :</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="lineEditLOGIN">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>30</y>
+       <y>20</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -68,27 +55,14 @@
       <string/>
      </property>
      <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_mdp">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>10</y>
-       <width>111</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Mot de passe :</string>
+      <string>Identifiant</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEditMDP">
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>30</y>
+       <y>20</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -103,7 +77,7 @@
       <enum>QLineEdit::Password</enum>
      </property>
      <property name="placeholderText">
-      <string/>
+      <string>Mot de passe</string>
      </property>
     </widget>
    </widget>
@@ -111,7 +85,7 @@
     <property name="geometry">
      <rect>
       <x>17</x>
-      <y>80</y>
+      <y>76</y>
       <width>241</width>
       <height>16</height>
      </rect>
@@ -124,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>312</x>
-      <y>76</y>
+      <y>73</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -133,17 +107,17 @@
      <string>Connexion</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="ButtonModeInvite">
+   <widget class="QPushButton" name="ButtonInscription">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>76</y>
+      <y>73</y>
       <width>81</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Mode Invité</string>
+     <string>Inscription</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">

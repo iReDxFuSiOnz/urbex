@@ -26,15 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    urbexeuraccessibility.cpp \
-    modeinvites.cpp
+    urbexeuraccessibility.cpp
 
 HEADERS += \
         mainwindow.h \
-    urbexeuraccessibility.h \
-    modeinvites.h
+    urbexeuraccessibility.h
 
 FORMS += \
         mainwindow.ui \
-    urbexeuraccessibility.ui \
-    modeinvites.ui
+    urbexeuraccessibility.ui
